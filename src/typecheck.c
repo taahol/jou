@@ -890,7 +890,7 @@ static ExpressionTypes *typecheck_expression(FileTypes *ft, const AstExpression 
         break;
     case AST_EXPR_SIZEOF:
         typecheck_expression_not_void(ft, &expr->data.operands[0]);
-        result = longType;
+        result = intType;
         break;
     case AST_EXPR_BRACE_INIT:
         result = typecheck_struct_init(ft, &expr->data.call, expr->location);
